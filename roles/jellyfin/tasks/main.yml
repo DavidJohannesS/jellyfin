@@ -1,0 +1,4 @@
+---
+# tasks file for jellyfin
+- name: Start jellyfin
+  ansible.builtin.include_tasks: create-container.yml
