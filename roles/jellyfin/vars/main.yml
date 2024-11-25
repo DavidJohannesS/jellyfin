@@ -1,2 +1,3 @@
 ---
 # vars file for jellyfin
+local_media_path: "/media/media"

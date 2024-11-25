@@ -11,6 +11,6 @@
     network_mode: host
     volumes:
       - "{{ role_path }}/files/config:/config"
-      - "/media/media:/media"
+      - "{{ local_media_path }}:/media"
     state: started
     restart_policy: always
