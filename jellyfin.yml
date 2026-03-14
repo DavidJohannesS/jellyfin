@@ -1,6 +1,5 @@
 ---
 - name: Setup Jellyfin
-  hosts: localhost
-  connection: local
+  hosts: all
   roles:
     - jellyfin

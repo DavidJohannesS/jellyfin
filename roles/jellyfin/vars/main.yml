@@ -1,3 +1,11 @@
 ---
 # vars file for jellyfin
 local_media_path: "/media/media"
+container_name: "jellyfin"
+container_image: "jellyfin/jellyfin"
+image_tag: "latest"
+
+options: >-
+  --network host
+  -v jellyfin-config-dir:/config
+  -v {{ local_media_path }}:/media
