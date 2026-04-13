@@ -12,8 +12,8 @@ ExecStart=/usr/bin/docker run \
   {{ options }} \
   {{ container_image }}:{{ image_tag }}
 
-ExecStop=/usr/bin/docker stop {{ container_name }}
-ExecStopPost=/usr/bin/docker rm {{ container_name }}
+ExecStopPost=-/usr/bin/docker rm {{ container_name }}
+ExecStopPost=-/usr/bin/docker rmi {{ container_image }}:{{ image_tag }}
 
 [Install]
 WantedBy=multi-user.target
